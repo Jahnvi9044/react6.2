@@ -3,14 +3,14 @@ import './App.css'
 
 function App() {
   const [todos, setTodo] = useState(0);
-
+   const []
 
   useEffect(()=>{
     axios.get("https://sum-server.100xdevs.com/todos").then(function(response){
       setTodo(response.data.todos);
     });
   },[])
-  return (
+  return (  
     <>
        {todos.map(todo=>{<Todo title={todo.title} description={todo.description}/>})}
     </>
